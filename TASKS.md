@@ -10,14 +10,6 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## To Do
 
-### TASK-5: Category and region breakdowns
-Build the category and region bar charts per FR-3 and FR-4.
-- [ ] Category bar chart shows all 5 categories, sorted by sales value descending
-- [ ] Region bar chart shows all 4 regions, sorted by sales value descending
-- [ ] Both charts have interactive tooltips with exact values
-
-Commit:
-
 ### TASK-6: Testing and refinement
 Verify the dashboard against the PRD's acceptance criteria and performance targets.
 - [ ] Dashboard loads within 5 seconds, charts render within 2 seconds
@@ -34,6 +26,15 @@ Deploy the dashboard for stakeholder review per NFR-5.
 Commit:
 
 ## In Progress
+
+### TASK-5: Category and region breakdowns
+Build the category and region bar charts per FR-3 and FR-4.
+- [x] Category bar chart shows all 5 categories, sorted by sales value descending
+- [x] Region bar chart shows all 4 regions, sorted by sales value descending
+- [x] Both charts have interactive tooltips with exact values
+
+Commit: 0738530
+Notes: The plan's `get_category_breakdown` test used sample data where two categories summed to an exact tie (30.0), and asserted a specific tie-break order. The PRD (FR-3/FR-4) only requires descending sort by value, with no tie-break rule, and pandas' groupby+sort_values doesn't produce the order the test assumed. Confirmed this was an unintentional tie in the plan's sample data, not an implementation bug, so the test's input values were adjusted to remove the tie rather than adding tie-break logic the PRD doesn't ask for.
 
 ## Done
 
