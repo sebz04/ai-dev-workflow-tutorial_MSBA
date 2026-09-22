@@ -10,14 +10,6 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## To Do
 
-### TASK-1: Environment setup and project initialization
-Set up the project structure, dependencies, and a runnable Streamlit skeleton.
-- [ ] Project structure created (`app.py`, `data/`, `requirements.txt`)
-- [ ] Dependencies installed (Streamlit, Plotly, Pandas)
-- [ ] `streamlit run app.py` launches without errors
-
-Commit:
-
 ### TASK-2: Data loading and basic structure
 Load `sales-data.csv` and prepare it for use in the dashboard.
 - [ ] CSV loads into a Pandas DataFrame without errors
@@ -66,5 +58,13 @@ Deploy the dashboard for stakeholder review per NFR-5.
 Commit:
 
 ## In Progress
+
+### TASK-1: Environment setup and project initialization
+Set up the project structure, dependencies, and a runnable Streamlit skeleton.
+- [ ] Project structure created (`app.py`, `data/`, `requirements.txt`)
+- [ ] Dependencies installed (Streamlit, Plotly, Pandas)
+- [ ] `streamlit run app.py` launches without errors
+
+Commit:
 
 ## Done
