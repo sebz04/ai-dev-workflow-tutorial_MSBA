@@ -1,6 +1,6 @@
 import pandas as pd
 
-from sales_data import load_sales_data
+from sales_data import get_total_orders, get_total_sales, load_sales_data
 
 
 def test_load_sales_data_parses_columns_and_dtypes(tmp_path):
@@ -19,3 +19,17 @@ def test_load_sales_data_parses_columns_and_dtypes(tmp_path):
     ]
     assert len(df) == 2
     assert pd.api.types.is_datetime64_any_dtype(df["date"])
+
+
+def _sample_df():
+    return pd.DataFrame({
+        "total_amount": [159.98, 74.97, 299.99],
+    })
+
+
+def test_get_total_sales_sums_total_amount():
+    assert get_total_sales(_sample_df()) == 534.94
+
+
+def test_get_total_orders_counts_rows():
+    assert get_total_orders(_sample_df()) == 3
