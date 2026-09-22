@@ -1,4 +1,5 @@
 import pandas as pd
+import pytest
 
 from sales_data import (
     get_category_breakdown,
@@ -80,3 +81,11 @@ def test_get_region_breakdown_sums_and_sorts_descending():
 
     assert list(breakdown["region"]) == ["South", "North"]
     assert list(breakdown["total_amount"]) == [60.0, 50.0]
+
+
+def test_real_csv_matches_prd_expected_output():
+    df = load_sales_data("data/sales-data.csv")
+
+    assert get_total_orders(df) == 482
+    assert get_total_sales(df) == pytest.approx(116_500, rel=0.02)
+    assert get_category_breakdown(df)["category"].iloc[0] == "Electronics"
