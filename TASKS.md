@@ -12,14 +12,17 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## In Progress
 
+## Done
+
 ### TASK-7: Deployment to Streamlit Community Cloud
 Deploy the dashboard for stakeholder review per NFR-5.
-- [ ] App deployed and reachable via a public shareable URL
-- [ ] Public URL loads correctly in a fresh browser session
+- [x] App deployed and reachable via a public shareable URL
+- [x] Public URL loads correctly in a fresh browser session
 
-Commit:
+URL: https://ai-dev-workflow-tutorialmsba-ztzdaoy2wrupsunsfjkpbk.streamlit.app/
 
-## Done
+Commit: N/A (manual deployment via the Streamlit Community Cloud UI; no code commit)
+Notes: Deployed from `main` — a manual step that can't be scripted, since it requires the user's GitHub-authenticated browser session. User confirmed the URL loads correctly in a fresh browser session.
 
 ### TASK-6: Testing and refinement
 Verify the dashboard against the PRD's acceptance criteria and performance targets.
