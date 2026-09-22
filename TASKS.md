@@ -10,14 +10,6 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## To Do
 
-### TASK-6: Testing and refinement
-Verify the dashboard against the PRD's acceptance criteria and performance targets.
-- [ ] Dashboard loads within 5 seconds, charts render within 2 seconds
-- [ ] All PRD acceptance criteria verified against sample data
-- [ ] Dashboard runs with no errors or warnings
-
-Commit:
-
 ### TASK-7: Deployment to Streamlit Community Cloud
 Deploy the dashboard for stakeholder review per NFR-5.
 - [ ] App deployed and reachable via a public shareable URL
@@ -26,6 +18,15 @@ Deploy the dashboard for stakeholder review per NFR-5.
 Commit:
 
 ## In Progress
+
+### TASK-6: Testing and refinement
+Verify the dashboard against the PRD's acceptance criteria and performance targets.
+- [x] Dashboard loads within 5 seconds, charts render within 2 seconds
+- [x] All PRD acceptance criteria verified against sample data
+- [x] Dashboard runs with no errors or warnings
+
+Commit: fb8d528
+Notes: Added the integration smoke test against the real CSV (482 orders, ~$116,500 total sales, Electronics as top category) — all 7 tests pass. Walked the PRD's Acceptance Criteria section item by item; no bugs found, so no code changes were needed beyond the test. One gap: the Claude in Chrome extension wasn't connected this session, so "professional appearance" and exact chart-render timing were checked via the terminal (clean `streamlit run` log, response returned well inside the 3s startup window) and code review (wide layout, titled sections, `st.metric` KPIs) rather than an actual rendered screenshot — worth a quick manual look in a browser before merging.
 
 ## Done
 
