@@ -10,14 +10,6 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## To Do
 
-### TASK-2: Data loading and basic structure
-Load `sales-data.csv` and prepare it for use in the dashboard.
-- [ ] CSV loads into a Pandas DataFrame without errors
-- [ ] Date, numeric, and categorical columns have correct dtypes
-- [ ] Row count and columns match the expected data spec (482 records)
-
-Commit:
-
 ### TASK-3: KPI cards implementation
 Display Total Sales and Total Orders per FR-1.
 - [ ] Total Sales shown formatted as currency (e.g. $116,500)
@@ -60,6 +52,15 @@ Commit:
 ## In Progress
 
 ## Done
+
+### TASK-2: Data loading and basic structure
+Load `sales-data.csv` and prepare it for use in the dashboard.
+- [x] CSV loads into a Pandas DataFrame without errors
+- [x] Date, numeric, and categorical columns have correct dtypes
+- [x] Row count and columns match the expected data spec (482 records)
+
+Commit: 00010e6
+Notes: The plan's test asserted `date` dtype as the literal string `datetime64[ns]`, but pandas 3.0 (installed in this env) infers `datetime64[us]` by default for `read_csv(parse_dates=...)`. Confirmed via a manual check that this is a pandas-version difference, not a bug — the interface contract only requires `date` to be a datetime column, not nanosecond-specific — so the assertion was changed to `pd.api.types.is_datetime64_any_dtype(...)` instead of forcing `sales_data.py` to fight the library's default resolution.
 
 ### TASK-1: Environment setup and project initialization
 Set up the project structure, dependencies, and a runnable Streamlit skeleton.
