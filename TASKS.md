@@ -10,14 +10,6 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## To Do
 
-### TASK-4: Sales trend chart
-Build the sales-over-time line chart per FR-2.
-- [ ] Line chart shows sales over time (daily or monthly granularity)
-- [ ] Interactive tooltips display exact values
-- [ ] Axes are clearly labeled
-
-Commit:
-
 ### TASK-5: Category and region breakdowns
 Build the category and region bar charts per FR-3 and FR-4.
 - [ ] Category bar chart shows all 5 categories, sorted by sales value descending
@@ -42,6 +34,14 @@ Deploy the dashboard for stakeholder review per NFR-5.
 Commit:
 
 ## In Progress
+
+### TASK-4: Sales trend chart
+Build the sales-over-time line chart per FR-2.
+- [x] Line chart shows sales over time (daily or monthly granularity)
+- [x] Interactive tooltips display exact values
+- [x] Axes are clearly labeled
+
+Commit: 1f09238
 
 ## Done
 
