@@ -27,6 +27,8 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-5: Category and region breakdowns
 Build the category and region bar charts per FR-3 and FR-4.
 - [x] Category bar chart shows all 5 categories, sorted by sales value descending
@@ -35,8 +37,6 @@ Build the category and region bar charts per FR-3 and FR-4.
 
 Commit: 0738530
 Notes: The plan's `get_category_breakdown` test used sample data where two categories summed to an exact tie (30.0), and asserted a specific tie-break order. The PRD (FR-3/FR-4) only requires descending sort by value, with no tie-break rule, and pandas' groupby+sort_values doesn't produce the order the test assumed. Confirmed this was an unintentional tie in the plan's sample data, not an implementation bug, so the test's input values were adjusted to remove the tie rather than adding tie-break logic the PRD doesn't ask for.
-
-## Done
 
 ### TASK-4: Sales trend chart
 Build the sales-over-time line chart per FR-2.
