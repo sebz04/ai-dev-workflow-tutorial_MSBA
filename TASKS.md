@@ -59,12 +59,12 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-1: Environment setup and project initialization
 Set up the project structure, dependencies, and a runnable Streamlit skeleton.
-- [ ] Project structure created (`app.py`, `data/`, `requirements.txt`)
-- [ ] Dependencies installed (Streamlit, Plotly, Pandas)
-- [ ] `streamlit run app.py` launches without errors
+- [x] Project structure created (`app.py`, `data/`, `requirements.txt`)
+- [x] Dependencies installed (Streamlit, Plotly, Pandas)
+- [x] `streamlit run app.py` launches without errors
 
-Commit:
-
-## Done
+Commit: 2bea6b6
