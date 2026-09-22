@@ -10,14 +10,6 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## To Do
 
-### TASK-3: KPI cards implementation
-Display Total Sales and Total Orders per FR-1.
-- [ ] Total Sales shown formatted as currency (e.g. $116,500)
-- [ ] Total Orders shown as a count
-- [ ] Values match expected output (~$116,500 / 482 orders)
-
-Commit:
-
 ### TASK-4: Sales trend chart
 Build the sales-over-time line chart per FR-2.
 - [ ] Line chart shows sales over time (daily or monthly granularity)
@@ -52,6 +44,15 @@ Commit:
 ## In Progress
 
 ## Done
+
+### TASK-3: KPI cards implementation
+Display Total Sales and Total Orders per FR-1.
+- [x] Total Sales shown formatted as currency (e.g. $116,500)
+- [x] Total Orders shown as a count
+- [x] Values match expected output (~$116,500 / 482 orders)
+
+Commit: e82fd1e
+Notes: Verified computed values directly against `data/sales-data.csv`: Total Sales = $116,500.21, Total Orders = 482, matching the PRD's expected output exactly.
 
 ### TASK-2: Data loading and basic structure
 Load `sales-data.csv` and prepare it for use in the dashboard.
