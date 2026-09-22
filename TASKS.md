@@ -52,7 +52,7 @@ Display Total Sales and Total Orders per FR-1.
 - [x] Values match expected output (~$116,500 / 482 orders)
 
 Commit: e82fd1e
-Notes: Verified computed values directly against `data/sales-data.csv`: Total Sales = $116,500.21, Total Orders = 482, matching the PRD's expected output exactly.
+Notes: clean
 
 ### TASK-2: Data loading and basic structure
 Load `sales-data.csv` and prepare it for use in the dashboard.
