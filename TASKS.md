@@ -35,6 +35,8 @@ Commit:
 
 ## In Progress
 
+## Done
+
 ### TASK-4: Sales trend chart
 Build the sales-over-time line chart per FR-2.
 - [x] Line chart shows sales over time (daily or monthly granularity)
@@ -42,8 +44,7 @@ Build the sales-over-time line chart per FR-2.
 - [x] Axes are clearly labeled
 
 Commit: 1f09238
-
-## Done
+Notes: clean
 
 ### TASK-3: KPI cards implementation
 Display Total Sales and Total Orders per FR-1.
