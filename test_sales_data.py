@@ -1,7 +1,9 @@
 import pandas as pd
 
 from sales_data import (
+    get_category_breakdown,
     get_monthly_sales_trend,
+    get_region_breakdown,
     get_total_orders,
     get_total_sales,
     load_sales_data,
@@ -54,3 +56,27 @@ def test_get_monthly_sales_trend_groups_and_sorts_by_month():
         pd.Timestamp("2024-01-01"), pd.Timestamp("2024-02-01"),
     ]
     assert list(trend["total_amount"]) == [30.0, 5.0]
+
+
+def test_get_category_breakdown_sums_and_sorts_descending():
+    df = pd.DataFrame({
+        "category": ["Audio", "Accessories", "Audio", "Wearables"],
+        "total_amount": [10.0, 50.0, 20.0, 25.0],
+    })
+
+    breakdown = get_category_breakdown(df)
+
+    assert list(breakdown["category"]) == ["Accessories", "Audio", "Wearables"]
+    assert list(breakdown["total_amount"]) == [50.0, 30.0, 25.0]
+
+
+def test_get_region_breakdown_sums_and_sorts_descending():
+    df = pd.DataFrame({
+        "region": ["North", "South", "North"],
+        "total_amount": [40.0, 60.0, 10.0],
+    })
+
+    breakdown = get_region_breakdown(df)
+
+    assert list(breakdown["region"]) == ["South", "North"]
+    assert list(breakdown["total_amount"]) == [60.0, 50.0]

@@ -21,3 +21,21 @@ def get_monthly_sales_trend(df: pd.DataFrame) -> pd.DataFrame:
         .sort_values("month")
         .reset_index(drop=True)
     )
+
+
+def get_category_breakdown(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.groupby("category", as_index=False)["total_amount"]
+        .sum()
+        .sort_values("total_amount", ascending=False)
+        .reset_index(drop=True)
+    )
+
+
+def get_region_breakdown(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.groupby("region", as_index=False)["total_amount"]
+        .sum()
+        .sort_values("total_amount", ascending=False)
+        .reset_index(drop=True)
+    )
