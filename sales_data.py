@@ -11,3 +11,13 @@ def get_total_sales(df: pd.DataFrame) -> float:
 
 def get_total_orders(df: pd.DataFrame) -> int:
     return len(df)
+
+
+def get_monthly_sales_trend(df: pd.DataFrame) -> pd.DataFrame:
+    return (
+        df.assign(month=df["date"].dt.to_period("M").dt.to_timestamp())
+        .groupby("month", as_index=False)["total_amount"]
+        .sum()
+        .sort_values("month")
+        .reset_index(drop=True)
+    )
