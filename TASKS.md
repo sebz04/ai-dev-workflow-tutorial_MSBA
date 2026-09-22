@@ -68,3 +68,4 @@ Set up the project structure, dependencies, and a runnable Streamlit skeleton.
 - [x] `streamlit run app.py` launches without errors
 
 Commit: 2bea6b6
+Notes: Claude initially overwrote the repo's existing .gitignore with a minimal version; caught via `git status`/`git diff` and reverted before committing, so the original (more complete) .gitignore shipped unchanged.
