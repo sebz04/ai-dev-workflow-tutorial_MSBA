@@ -10,14 +10,14 @@ This file tracks all work for the ShopSmart e-commerce analytics dashboard (see 
 
 ## To Do
 
+## In Progress
+
 ### TASK-7: Deployment to Streamlit Community Cloud
 Deploy the dashboard for stakeholder review per NFR-5.
 - [ ] App deployed and reachable via a public shareable URL
 - [ ] Public URL loads correctly in a fresh browser session
 
 Commit:
-
-## In Progress
 
 ## Done
 
